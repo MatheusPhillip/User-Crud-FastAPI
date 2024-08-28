@@ -25,6 +25,8 @@ interactive documentation provided by Swagger.
 
 ### Response
 
+    HTTP/1.1 200 OK
+
     [
         {
             "id": "24d1e67d-9417-41f3-a7d0-cb1f00f3c22a",
@@ -75,8 +77,58 @@ interactive documentation provided by Swagger.
 
 `POST /api/v1/users`
 
+    {
+        "first_name": "John",
+        "last_name": "Wick",
+        "gender": "male",
+        "roles": [
+        "admin"
+        ]
+    }
+
 ### Response
+
+    HTTP/1.1 200 OK
 
     {
         "id": "7605a452-2efe-4a7f-8f05-dfbeced63282"
+    }
+
+## Delete User
+
+### Request
+
+`POST /api/v1/users/{user_id}`
+
+### Response
+
+    HTTP/1.1 200 OK
+
+    {
+        "message": "user deleted",
+        "user": {
+            "id": "66ad8513-bd6c-4cd5-b29a-f8dc0ad3a82c",
+            "first_name": "Matheus",
+            "last_name": "Miranda",
+            "middle_name": null,
+            "gender": "male",
+            "roles": [
+            "user",
+            "admin"
+            ]
+        }
+    }
+
+## Delete User That Does Not Exist
+
+### Request
+
+`POST /api/v1/users/{invalid_user_id}`
+
+### Response
+
+    HTTP/1.1 404 Not Found
+
+    {
+        "detail": "user with id: 66ad8513-bd6c-4cd5-b29a-f8dc0ad3a82c does not exist"
     }
