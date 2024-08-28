@@ -9,7 +9,7 @@ best from this API
 
 ## Run the app
 
-    Uvicorn main:app --reload
+    uvicorn main:app --reload
 
 # REST API
 
