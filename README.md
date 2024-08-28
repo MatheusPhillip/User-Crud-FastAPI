@@ -14,6 +14,8 @@ best from this API
 # REST API
 
 The REST API to the crud app is described below.
+Or access `/docs` on your browser to check the
+interactive documentation provided by Swagger.
 
 ## Get list of Users
 
