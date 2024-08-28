@@ -71,6 +71,10 @@ The REST API to the crud app is described below.
 
 ### Request
 
-`POST /`
+`POST /api/v1/users`
 
 ### Response
+
+    {
+        "id": "7605a452-2efe-4a7f-8f05-dfbeced63282"
+    }
