@@ -75,7 +75,7 @@ async def update_user(user_update: UserUpdateRequest, user_id: UUID):
                 user.middle_name = user_update.middle_name
             if user_update.roles is not None:
                 user.roles = user_update.roles
-            return "user updated"
+            return {"message": "user updated"}
     raise HTTPException(
         status_code=404,
         detail=f"user with id: {user_id} does not exist"
