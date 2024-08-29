@@ -98,7 +98,7 @@ interactive documentation provided by Swagger.
 
 ### Request
 
-`POST /api/v1/users/{user_id}`
+`DELETE /api/v1/users/{user_id}`
 
 ### Response
 
@@ -123,7 +123,35 @@ interactive documentation provided by Swagger.
 
 ### Request
 
-`POST /api/v1/users/{invalid_user_id}`
+`DELETE /api/v1/users/{invalid_user_id}`
+
+### Response
+
+    HTTP/1.1 404 Not Found
+
+    {
+        "detail": "user with id: 66ad8513-bd6c-4cd5-b29a-f8dc0ad3a82c does not exist"
+    }
+
+## Update User
+
+### Request
+
+`PUT /api/v1/users/{user_id}`
+
+### Response
+
+    HTTP/1.1 200 OK
+
+    {
+        "message": "user updated",
+    }
+
+## Update User That Does Not Exist
+
+### Request
+
+`PUT /api/v1/users/{invalid_user_id}`
 
 ### Response
 
